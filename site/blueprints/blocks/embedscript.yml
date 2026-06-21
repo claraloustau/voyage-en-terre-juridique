@@ -1,0 +1,13 @@
+name: HTML / Script (insertion brute)
+icon: html
+wysiwyg: false
+preview: markup
+fields:
+  markup:
+    label: Code HTML ou JavaScript à insérer
+    type: textarea
+    buttons: false
+    font: monospace
+    spellcheck: false
+    placeholder: |-
+      une balise <script src="…" …></script> ou tout HTML brut.

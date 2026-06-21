@@ -1,0 +1,21 @@
+Title: 4- Le devis
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Le devis est un document contractuel qui formalise une offre de prestations, de services, en précisant le coût des éléments qui la composent. En tant que futur·e travailleur·euse de l’art indépendant·e, vous serez amené·es à établir des devis pour vos projets. Ce document permet de clarifier les termes de l’accord avec votre client·e et de définir les conditions de votre collaboration. C’est aussi un outil de négociation qui peut être revu plusieurs fois selon les besoins et le budget des client·es. On peut également vous demander plusieurs devis pour séparer les prestations. Par exemple, un devis pour une affiche et un second pour les déclinaisons réseaux sociaux.</p><p>Le premier devis est établi à la demande des client·es qui souhaitent se faire une idée des coûts d’un projet. Il est parfois rédigé avec peu d'informations. Il peut arriver d’en rédiger plusieurs avant de signer celui qui conviendra aux deux partis.</p><p>Il devient indispensable dès lors que vous proposez une prestation payante. Il sert à poser les contours d’un projet avant de le débuter, en assurant à la fois la transparence vis-à-vis de votre client·e et la protection de vos droits⁴ et de votre travail en tant que prestataire.</p>"},"id":"d113b4d8-2c30-4585-bf4c-868cc4f3327d","isHidden":false,"type":"text"},{"content":{"level":"h4","text":"Le devis permet :"},"id":"68653895-223a-49eb-a059-7879cf2dbd5e","isHidden":false,"type":"heading"},{"content":{"text":"<ul><li><strong>Une clarification du périmètre du projet</strong> : Il permet de spécifier ce qui est inclus dans la prestation. Cela permet d’éviter des malentendus sur les attentes des client·es.</li><li><strong>Une protection légale</strong> : Un devis signé est un contrat. Il vous protège en cas de conflit ou de désaccord avec votre client·e, car il définit les termes de l'accord.</li><li><strong>Une transparence des coûts</strong> : Avec un devis, la·e client·e sait exactement ce qu'il·elle paie.</li><li><strong>Un suivi de projet facilité : </strong>Le devis sert aussi de référence pour mesurer l’avancement et s’assurer que toutes les étapes du projet sont bien respectées.</li></ul>"},"id":"632d8f40-5aa2-482a-a7cf-b1dc1d82956e","isHidden":false,"type":"list"}]
+
+----
+
+Wordnotes:
+
+-
+  term: 'la protection de vos droits⁴'
+  note: '<p><a href="/@/page/8vbmzxg9v1xphms9">Voir : B-5-Les droits d''auteurs page 31</a></p>'
+
+----
+
+Uuid: e0n0ghzj0rctpskc

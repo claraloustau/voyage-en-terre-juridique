@@ -1,0 +1,17 @@
+Title: 2- Comment structurer une feuille de route
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Une feuille de route efficace repose sur plusieurs élémentsclés qui permettent d’organiser un projet de manière logique et fluide.</p>"},"id":"5b144e8b-ed79-4b12-906f-524bc4bdeb36","isHidden":false,"type":"text"},{"content":{"text":"<p>Voici les composantes essentielles :</p>"},"id":"dcc327e5-6fed-4e77-bcdd-958c82f91372","isHidden":false,"type":"text"},{"content":{"text":"<ul><li><strong>Phase de recherche</strong>Analyse du contexte, veille, exploration de références visuelles, création de moodboards.</li><li><strong>Phase d’exploration</strong>Esquisses, tests graphiques, expérimentations.</li><li><strong>Phase de conception</strong>Maquettage, prototypage, ajustements.</li><li><strong>Phase de production</strong>Réalisation des éléments finaux.<strong>Phase de finalisation</strong>Validation, exportation des fichiers, envoi des livrables.</li></ul>"},"id":"dfeb2382-41aa-4fc7-82b2-0d12b9446072","isHidden":false,"type":"list"},{"content":{"level":"h2","text":"Le plan d’action"},"id":"6f2e5bcd-e794-4b2e-bd1b-6da31015edca","isHidden":false,"type":"heading"},{"content":{"text":"<p>Avant de commencer, il est important de détailler toutes les étapes nécessaires au bon déroulé du projet. Il s’agit tout d’abord de lister les différentes phases de production : Par exemple, pour la mise en page d’un livre, on passe de la recherche typographique à la structuration des contenus, puis aux essais de composition, avant la finalisation et l’impression. Ces périodes sont entrecoupées de moments d’échanges et de rencontres. L’objectif de la feuille de route est de hiérarchiser l'ordre de priorité des étapes et de les organiser dans le temps. Il est important de bien évaluer le temps nécessaire à la réalisation de chaque étape, en particulier si une date d’échéance est fixée dès le départ. L’idéal est de définir ce plan d’action avec tous les partis concernés dès le premier rendez-vous, afin notamment de faire coïncider tous les emplois du temps. Cela permettra aussi de prendre contact le plus rapidement possible avec d’éventuels prestataires externes, tels que l’impression ou le matériel, afin de les prévenir de vos besoins ainsi que de prendre connaissance de leurs délais de livraison.</p>"},"id":"a1e98115-4fb0-4edc-9a8e-fcb163ea496f","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Le suivi du projet"},"id":"56e3102a-ec63-4422-8914-1110c607cc7e","isHidden":false,"type":"heading"},{"content":{"text":"<p>Consulter régulièrement la feuille de route permet de se tenir au courant de la progression du projet. Le document doit être tenu à jour en précisant l’avancée des réalisations, en spécifiant quelles étapes sont terminées. Il est très fréquent que des informations soient modifiées ou développées en cours de projet. Afin de bien rester synchronisé·e avec ses client·es, il est important de se référer aux termes utilisés dans le document, comme le nom des différentes étapes.<br><br>Par exemple : rappeler le titre de l’étape en cours dans l’objet et en début de mail, permet aux client·es de prendre connaissance de votre avancée et de bien contextualiser les informations transmises dans le message. Aussi, lors des réunions, rappeler le nom de la phase qui s’achève et de celle que l’on amorce permet de gagner du temps et de la clarté.</p>"},"id":"2f7e2463-5c94-4340-a496-a5aa1f3f17fd","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes: []
+
+----
+
+Uuid: zpnh8pp2sevwm9wp

@@ -1,0 +1,21 @@
+Title: 6- Phases de travail
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"level":"h2","text":"Récolte du contenu"},"id":"807f0211-0000-4362-b8d9-271fee7b345e","isHidden":false,"type":"heading"},{"content":{"text":"<p>Une fois la facture d’acompte payée, il est temps de se mettre au travail. Une des clefs pour un déroulé fluide et efficace est d’éviter les surprises sur les éléments à utiliser. Il est primordial de récupérer le maximum de contenu avant de se mettre au travail, car c’est le fond qui donne la forme aux créations. Une partie de la réussite du projet dépend aussi des informations et du matériel qui doivent être fournis par la·e client·e : la charte graphique, les polices de caractères, l'iconographie, le contenu textuel, etc.</p><p>Tous ces éléments figureront sur la feuille de route et le cahier des charges. Pour le contenu multimédia, précisez vos besoins (type de fichier, résolution, mode colorimétrique), car ces détails peuvent impacter le bon déroulement du processus de conception.</p>"},"id":"1a3d2c9a-038d-47b5-9bc3-7c4c09a3b4e3","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Production"},"id":"869a3e2e-959a-4d7b-95b2-f888ac2c8853","isHidden":false,"type":"heading"},{"content":{"text":"<p>La phase de production est unique à chaque projet. Cependant, il est possible de mettre en place des vérifications systématiques pour éviter de sortir du cadre de travail. La feuille de route servira de guide, tandis que l’organisation des documents de travail, avec une hiérarchie claire, agira comme une carte. <br>Si vous travaillez en équipe, il est essentiel de se répartir clairement les tâches en discutant des responsabilités de chacun·es au préalable.</p><p>Libre à vous d’accepter les changements et modifications en cours de route qui pourraient venir de vos client·es. Mais n’oubliez pas que toute demande non prévue par le cahier des charges ou le devis signé n’est pas contractuelle et peut-être sujette à une facturation supplémentaire.</p>"},"id":"ded4e2e2-ea1a-470e-a443-db9aff1ac984","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Présentation"},"id":"b11a0c6f-3015-4641-97cb-1fc3aa869139","isHidden":false,"type":"heading"},{"content":{"text":"<p>Pour présenter votre travail, assurez-vous de proposer les meilleures conditions de lecture. Faites un fichier propre et clair, dans lequel la·e client·e pourra se projeter facilement. Soyez concis·e dans vos textes, car il est frustrant pour la·e client·e de se perdre dans une surcharge d’informations lorsqu’il·elle découvre sa commande. Un document clair mettra en valeur vos idées et leur pertinence pour la·e client·e.</p>"},"id":"44055f82-08a5-412a-9db5-e39e1b87157f","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Correction, modifications"},"id":"6f4f9180-8b0d-4797-9b7f-3cc2fa980c8a","isHidden":false,"type":"heading"},{"content":{"text":"<p>Il peut arriver que la·e client·e demande des corrections ou des modifications lors de la présentation du travail. Cela peut être dû à plusieurs raisons : un changement en cours de projet, un besoin mal évalué, ou tout simplement un imprévu. Pensez à inclure un nombre d’allers-retours⁵ limité pour les corrections dans votre devis, afin de bien encadrer ces ajustements. Si la·e client·e demande plus de modifications que prévu, vous pouvez proposer un forfait pour chaque nouvelle intervention. Le devis signé vous permettra de justifier ces ajustements.</p>"},"id":"e6ac3a44-72ce-40d3-a626-9a01e6c44763","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes:
+
+-
+  term: d’allers-retours⁵
+  note: "Par convention, le nombre d'allers-retours inclus dans une prestation est autour de 2. Mais chaque projet étant différent, projetez vous en fonction de vos impératifs."
+
+----
+
+Uuid: v7fgtp8fkf0brvga

@@ -1,0 +1,17 @@
+Title: 3- Le cahier des charges
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Le cahier des charges est un document détaillé qui définit précisément les attentes, les contraintes et les exigences d’un·e client·e pour son projet. Contrairement à la feuille de route, qui sert à organiser et suivre le projet, le cahier des charges fixe le cadre technique et fonctionnel dès le départ. Il précise les informations techniques de la commande comme les formats, les types de fichiers, les supports et matériaux, etc.</p>"},"id":"e53482dc-e6f4-47dd-9b35-366aa306b6d4","isHidden":false,"type":"text"},{"content":{"level":"h4","text":"Un cahier des charges permet de :"},"id":"f973445e-3623-4989-a02e-fa69255abf6f","isHidden":false,"type":"heading"},{"content":{"text":"<ul><li>Clarifier les attentes du·e la client·e ou du·e la commanditaire.</li><li>Définir les contraintes techniques et budgétaires.</li><li>Éviter les incompréhensions et les modifications coûteuses en cours de projet.</li><li>Servir de référence pour valider les livrables et les décisions créatives.</li></ul>"},"id":"9a3279c2-9c90-46b5-abf3-7f134f550239","isHidden":false,"type":"list"}]
+
+----
+
+Wordnotes: []
+
+----
+
+Uuid: mfe6wnvxuhwaxhgx

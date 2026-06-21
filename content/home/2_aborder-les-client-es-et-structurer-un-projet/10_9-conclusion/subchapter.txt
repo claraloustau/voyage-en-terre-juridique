@@ -1,0 +1,17 @@
+Title: 9- Conclusion
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Répondre à une commande graphique peut parfois ressembler à un parcours du combattant, mais une bonne organisation et une communication claire avec la·e client·e sont la clé pour réussir au mieux un projet. Il faudra s’armer de patience, utiliser des outils adaptés. Prendre du recul par rapport aux expériences passées vous aidera à personnaliser votre méthode de travail au fil des projets. Le plus important est de respecter le cadre légal (devis et facturations, CGV…), de communiquer avec les client·es et de ne pas hésiter à essayer de nouvelles méthodes pour gagner en efficacité.</p>"},"id":"3024da50-0e72-43f7-b46e-bc735502499b","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes: []
+
+----
+
+Uuid: shcqeex9ztleetzb

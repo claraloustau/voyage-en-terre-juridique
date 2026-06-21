@@ -1,0 +1,12 @@
+name: Terme annoté
+icon: bookmark
+fields:
+  term:
+    label: Mot ou expression
+    type: text
+    required: true
+  note:
+    label: Note (survol)
+    type: textarea
+    buttons: false
+    required: true

@@ -1,0 +1,17 @@
+Title: Intro
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Pour faciliter le bon déroulé d’un projet, il est important de le structurer de manière adaptée dès le démarrage. Découper le temps du projet par phases est une bonne manière de l’organiser. Le découpage en différentes parties peut s’appuyer sur des événements, des rendez-vous fixés dans un calendrier, ou être défini par des échéances et des étapes de travail. <br>Une feuille de route permet d’aborder plus sereinement les différentes actions à mener pour arriver au résultat final. Si elle semble être une méthode de travail élémentaire, elle vous sera utile pour mener plusieurs commandes en simultané et sera essentielle pour les projets qui s'étendent sur plusieurs mois. L’autre avantage est qu’elle peut servir à renforcer votre relation de confiance avec la·e client·e. Partager et définir la feuille de route en collaboration avec votre interlocuteur·ice permet de montrer que vous êtes engagé·e dans le projet, et de l'aborder sereinement. C'est également l'occasion d'impliquer et de responsabiliser votre client·e.</p>"},"id":"bab48b18-152d-42d5-815b-444f59dedc6f","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes: []
+
+----
+
+Uuid: wezkw1g0hcijj5eq

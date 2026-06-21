@@ -1,0 +1,21 @@
+Title: Voyage en terre juridique
+
+----
+
+Booksurface: #ffffff
+
+----
+
+Bookaccent: #f2edda
+
+----
+
+Bookfooter-col1: <p>Publication numérique 2026</p>
+
+----
+
+Bookfooter-col2: <p>Collectif2223</p>
+
+----
+
+Bookfooter-col3: <p>Développement Clara Loustau</p>

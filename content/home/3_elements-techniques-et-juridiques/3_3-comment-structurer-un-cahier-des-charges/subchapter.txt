@@ -1,0 +1,17 @@
+Title: 3- Comment structurer un cahier des charges
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Un cahier des charges sert à décrire les besoins, exigences et contraintes d’un projet. Une fois rédigé, il servira de référence aux deux parties pour s’assurer que le projet respecte les attentes des client·es. Il répertorie les diverses informations d’ordres techniques, esthétiques, fonctionnels, juridiques ou budgétaires.</p>"},"id":"a20a1fb4-2091-40c9-9238-8817ccf8ac39","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Contexte du projet"},"id":"0e059bc1-a290-4400-aec2-d1d379e5021a","isHidden":false,"type":"heading"},{"content":{"text":"<p>Il est important de bien cerner les objectifs du projet avant de démarrer le travail. Commencez par identifier qui est la·e client·e ou la·e commanditaire et quel est le besoin ou le problème à résoudre. Vous devez également définir la cible principale afin d'adapter la réalisation en conséquence. Renseignez-vous sur les éventuelles références ou inspirations à suivre pour orienter votre travail.</p><p>Par exemple, pour la création d'une affiche de festival, il est essentiel de connaître l’identité du festival, son public cible et le ton graphique souhaité, qu'il soit classique ou alternatif, etc.</p>"},"id":"72abd7fb-87dd-4891-a044-14a7e5c421b7","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Spécifications techniques"},"id":"decbfa1d-20ca-4f72-b226-11c8e05bcd52","isHidden":false,"type":"heading"},{"content":{"text":"<p>Le cahier des charges doit préciser les spécifications techniques du projet. La totalité des formats, chacune des déclinaisons ainsi que toutes les dimensions doivent être listées de manière exhaustive.<br><br>Pour des productions numériques, les normes de résolutions sont à renseigner. Il convient aussi de définir les types de fichiers attendus, tels que PDF, PNG, EPS, SVG, etc. N'oubliez pas de mentionner les règles typographiques et graphiques à respecter.</p><p>Toutes ces précisions permettent d’établir la liste complète des livrables. La rigueur est la précision nécessaire pour éviter les erreurs, les oublis et les pertes de temps.</p>"},"id":"70c3d057-7666-4fe4-be9a-f8a42eaedae7","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes: []
+
+----
+
+Uuid: tvgcff014ltywufp

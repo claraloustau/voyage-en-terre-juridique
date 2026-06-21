@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Copiez ce fichier en config.local.php pour vos réglages locaux.
+ * config.local.php est ignoré par Git.
+ */
+return [
+	'debug' => true,
+];

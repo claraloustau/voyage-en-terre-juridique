@@ -1,0 +1,17 @@
+Title: 7- Finalisation
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"level":"h2","text":"Livraison et guide d’utilisation"},"id":"62adb169-56b0-41a7-a964-c98b01eba9c4","isHidden":false,"type":"heading"},{"content":{"text":"<p>La phase de livraison est une étape cruciale dans le processus de création. Elle consiste à fournir aux client·es tous les fichiers finaux dans les formats appropriés. En parallèle, un guide d'utilisation, tel qu'une charte graphique ou un manuel d'instruction, est essentiel pour expliquer le bon usage des éléments livrés. Il est conçu pour garantir l’autonomie des client·es. L'objectif est que la·e client·e ait toutes les clés en main pour exploiter les livrables, qu’il s’agisse de supports de communication imprimés, de publications web ou de toute autre application.</p><p>Le guide d'utilisation devient ainsi une référence essentielle pour assurer une uniformité graphique et le respect de la ligne artistique établie.</p>"},"id":"ecffa5f3-be8f-40d9-9060-4e560742c3f5","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Suivi post-livraison"},"id":"e1c6f7f4-a370-4a3f-954e-876c095ba193","isHidden":false,"type":"heading"},{"content":{"text":"<p>Le suivi post-livraison est tout aussi important que la livraison des fichiers eux-mêmes. Après la remise des livrables, il est essentiel de s'assurer que la transition vers l'utilisation des nouveaux éléments se fasse facilement. Ce suivi permet d’accompagner la·e client·e pendant les premières étapes d’utilisation, qu’il s’agisse d’une nouvelle identité visuelle, de supports imprimés ou d’une plateforme numérique.</p><p>Durant les premiers jours, il peut être nécessaire de répondre à des questions, d’effectuer des ajustements ou de résoudre d’éventuels problèmes liés à la mise en place.</p><p>Rester disponible pour la·e client·e pendant cette période est primordial. Cela peut inclure des échanges par email, des appels ou des réunions pour résoudre des questions ou des problèmes techniques mineurs. L’objectif est d’assurer une transition fluide et de renforcer la relation avec la·e client·e, en montrant que vous êtes engagé·e à soutenir l’utilisation de vos créations. Néanmoins, dans le cadre de projets importants, il peut être judicieux de proposer un service de maintenance rémunéré. Ce contrat permettra un accompagnement dans le temps pour faire des mises à jour et des ajustements.</p>"},"id":"17182da9-b924-4d61-aa60-bc21e5c001a1","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes: []
+
+----
+
+Uuid: v7sphqzeqwzr4ti0

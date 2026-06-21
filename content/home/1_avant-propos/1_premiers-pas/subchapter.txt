@@ -1,0 +1,29 @@
+Title: Premiers pas
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Nous sommes un collectif de design graphique pluridisciplinaire qui oeuvre entre Pau et Toulouse. Formé en 2022, nous opérons dans la création graphique ainsi que sa transmission par le biais d’ateliers dans les écoles (maternelles, primaires, post bac…). Nos client·es sont variés, de la start-up aux communautés des communes en passant par les particuliers. Nous sommes des artistes-auteur·ices indépendant·es organisé·es en association. <br><br>Sous l’impulsion de Jean-François Dumont², désireux d’accompagner la professionnalisation des jeunes diplômé·es, nous nous sommes installé·es en 2022 au technopole Hélioparc. C’est durant cette période de réflexion sur l’accompagnement à la sortie d’étude des artistes et designer·euses que nous avons fait la rencontre des membres du cabinet A.P.I. Conseil.</p><p>Nous avons rapidement commencé à discuter de ces questions de protection des oeuvres en tant qu’artistes-auteur·ices, mais aussi de la protection de la personne elle-même dans des situations de litiges juridiques. Nous avons pris conscience de notre manque de connaissances sur ces sujets et qu’il serait intéressant de mettre en place un dispositif dynamique pour préparer les étudiants à leur sortie d’école d’art.</p><p>C’est ainsi qu’est né le projet « Voyage en terre juridique ». Un temps fort qui sort des cours théoriques, pour laisser place à des questionnements professionnels et de propriété intellectuelle par l’expérience de terrain. Cet atelier est composé de plusieurs situations, vécues ou réfléchies, en partenariat avec A.P.I. Conseil, venant mettre en lumière différentes problématiques qui peuvent survenir lors d’une commande de design graphique.</p><p>Accompagné·es par ce livret, vous allez aborder chaque étape d'un projet : la demande, le devis et la contractualisation, la facturation, le suivi de projet et la protection de vos travaux. Au risque de proposer des scénarios caricaturaux, nous avons fait le choix de la simulation afin de vous offrir un contexte de projection.</p>"},"id":"b2","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes:
+
+-
+  term: 'Jean-François Dumont²'
+  note: "Directeur général de l'ÉSAD Pyrénées de l'année 2015 à 2024"
+
+----
+
+Template: subchapter
+
+----
+
+Status: listed
+
+----
+
+Uuid: subChap01prems

@@ -1,0 +1,17 @@
+Title: 5- Facture d'acompte
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Après les échanges avec la·e client·e, la signature du devis et la mise en place du calendrier, il est temps pour vous de demander le versement d’un premier acompte afin de démarrer le travail de création et de production.</p><p>Une facture d’acompte est utilisée en comptabilité pour confirmer qu'un·e client·e a effectué un paiement partiel avant l'achèvement d'un projet ou d'un service. Par convention, cet acompte représente souvent 30 % du montant total du projet, mais son montant est librement déterminé par l'émetteur·ice de la facture.</p>"},"id":"eb9c92a9-e647-4483-a63c-22d125336509","isHidden":false,"type":"text"},{"content":{"text":"<p>Théoriquement, elle peut intervenir dans tous les projets, mais elle est essentielle dans deux situations :</p>"},"id":"e2f6bed5-9a10-41f6-9f06-8dc435acf8e8","isHidden":false,"type":"text"},{"content":{"text":"<ul><li>Lorsque le montant du projet est élevé.</li><li>Lorsque le projet s’étale sur une longue période.</li></ul>"},"id":"271cafda-bb03-4e7b-97b0-ebe30f7fc859","isHidden":false,"type":"list"},{"content":{"text":"<p>Le paiement de la facture d’acompte constitue un premier revenu. En effet, il est plus confortable de s’engager sereinement sur un projet en ayant de la ressource financière, plutôt que de travailler à crédit, dans l’attente du paiement final. C’est ce qu’on pourrait également appeler une avance. Lorsque l’acompte vous a été versé, vous êtes assuré qu’une première partie de votre travail est déjà payée : les réunions, la phase de recherche, le maquettage, etc. Elle officialise et engage la·e client·e dans le projet. <br><br>Sans acompte, il existe un risque que le projet n’aboutisse pas. Il est donc préférable de ne pas commencer à travailler tant que cet acompte n’a pas été versé. L’acompte est une pratique courante dans de nombreux secteurs de services, comme la mécanique, l’artisanat ou encore la location. En tant que designer·euse, demander un acompte permet d’affirmer votre professionnalisme et de sécuriser votre travail.</p>"},"id":"4fd8e9a7-6f77-4f0f-a319-4486758aa3a4","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes: []
+
+----
+
+Uuid: fhqbuccpokn68ark

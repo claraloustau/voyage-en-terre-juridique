@@ -1,0 +1,17 @@
+Title: 8- Facture
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Une facture est un document commercial officiel qui finalise une transaction entre un·e prestataire de services ou un·e fournisseur·euse de produits et ses client·es. Elle détaille le montant des prestations fournies et des produits vendus, ainsi que les conditions de paiement convenues.</p><p>En tant que designer·euse graphique, vous serez amené·e à émettre des factures pour vos prestations créatives, qu’il s’agisse de conception graphique, de création d’identité visuelle, de développement de projets numériques, etc.</p><p>Une facture comprend généralement plusieurs éléments essentiels : la description des prestations réalisées, le montant à payer, la date d’émission, le numéro de facture, les informations fiscales et les modalités de paiement. Contrairement au devis, qui est une estimation avant la prestation, la facture est un document qui certifie que la prestation a été effectuée et qu'un paiement est dû.</p>"},"id":"ed12568d-e92e-4d05-a075-b62c20395d0d","isHidden":false,"type":"text"},{"content":{"text":"<p>Voici pourquoi il est essentiel d’émettre une facture :</p>"},"id":"5d1798d9-79b4-48c5-8571-92d0e42d4a71","isHidden":false,"type":"text"},{"content":{"text":"<ul><li><strong>Preuve de la transaction</strong>La facture est une preuve légale de vente ou de prestation. Elle sert à enregistrer officiellement la transaction pour les deux parties et peut être utilisée en cas de litige.</li><li><strong>Obligations légales </strong>Émettre une facture est une obligation légale si vous êtes indépendant·e ou que vous avez une structure juridique (SASU, SARL, etc.). Vous devez obligatoirement éditer des factures afin de justifier de vos revenus en cas de contrôle fiscal.</li><li><strong>Suivi de paiement</strong> La facture permet de suivre les paiements effectués et de s’assurer que le montant convenu est payé dans les délais impartis. C’est aussi un outil qui facilite le suivi des impayés et la gestion des relances en cas de retard de paiement.</li><li><strong>Transparence fiscale</strong> La facture permet de garantir la transparence dans la relation commerciale. Elle précise les montants TTC, le taux de TVA applicable et les autres charges fiscales ou commerciales, ce qui vous aide à respecter les régulations fiscales en vigueur.</li></ul>"},"id":"dde7ba35-b114-4f8f-b30f-97d802f0fb40","isHidden":false,"type":"list"}]
+
+----
+
+Wordnotes: []
+
+----
+
+Uuid: alwq1u5pyyxupu8o

@@ -1,0 +1,24 @@
+Title: A.P.I. Conseil
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Fondé à Pau en 2002, A.P.I. Conseil est un cabinet de conseil en propriété industrielle à taille humaine, qui chérit les liens étroits qu’il entretient avec ses clients et ses partenaires locaux. Sa vision du métier de Conseil consiste à accompagner les entrepreneur·euses de demain vers le succès !</p>"},"id":"ba77dba1-d33c-424c-8ac3-b55a68a8a134","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"La plateforme"},"id":"ed51c1ee-2232-4478-908a-e891b1afa290","isHidden":false,"type":"heading"},{"content":{"text":"<p>IP4ARTIST¹² est votre allié pour maîtriser les enjeux de la propriété intellectuelle. Cette plateforme en ligne propose un parcours d’apprentissage autonome et interactif à travers des supports vidéo courts, des quiz et des ateliers pratiques conçus spécialement pour vous.</p><p>Grâce à ce dispositif, vous pourrez acquérir des connaissances juridiques et économiques essentielles pour protéger et valoriser votre créativité dès le début de votre carrière. Vous avez donc un accès illimité à des contenus actualisés et pertinents, pour vous préparer efficacement aux défis du monde professionnel de l’art et du design.</p>"},"id":"1aeab156-a903-423c-af22-5a92e34fd698","isHidden":false,"type":"text"},{"content":{"text":"<p>Les catégories de cours:</p>"},"id":"280f6e84-47f8-4847-b795-c99bbdb2b23d","isHidden":false,"type":"text"},{"content":{"text":"<ul><li>La propriété intellectuelle : présentation et usage</li><li>Le droit d'auteur</li><li>Négociation, contrat et relation client</li><li>Propriété industrielle : marques, identifiants commerciaux et DM¹³</li></ul>"},"id":"2cc85cda-52a4-47ae-901f-6849bbc3a6ce","isHidden":false,"type":"list"}]
+
+----
+
+Wordnotes:
+
+-
+  term: IP4ARTIST¹²
+  note: '<p><a href="https://ip4artist.api-conseil.app/" target="_blank">https://ip4artist.api-conseil.app/</a></p>'
+-
+  term: DM¹³
+  note: "Dessin ou modèle : l'enregistrement d'un dessin ou modèle confère à son titulaire un droit de propriété sur son titre, qu'il peut céder (vendre) ou concéder (louer)."
+
+----
+
+Uuid: 5sidssardj0hsgzn

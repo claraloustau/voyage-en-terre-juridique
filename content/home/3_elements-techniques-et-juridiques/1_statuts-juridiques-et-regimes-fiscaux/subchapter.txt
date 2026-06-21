@@ -1,0 +1,24 @@
+Title: 1- Statuts juridiques et régimes fiscaux
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>Lorsque l’on se lance en tant que travailleur·euse indépendant·e, le choix du statut juridique est une étape essentielle. Plusieurs options s’offrent aux artistes et designer·euses. Chacune a ses spécificités en termes de fiscalité, de protection sociale et d’obligations administratives.<br><br>L’auto-entreprise est une entreprise individuelle qui relève du régime fiscal de la micro-entreprise<sup>6</sup> et du régime micro-social pour le paiement des cotisations et des contributions sociales.</p><p>Le statut d'artiste auteur·ices⁷ s'adresse aux créateur·ices d'oeuvres de l'esprit, couvrant des domaines tels que la littérature, la musique, les arts graphiques et plastiques, le cinéma, l'audiovisuel, la photographie et le logiciel.</p><p>La majorité des revenus de l'artiste-auteur·ice est soumise au régime de la Sécurité sociale des artistes-auteur·ices. Il est nécessaire de distinguer les revenus principaux et les revenus accessoires.</p><p>Nous vous conseillons de bien vous informer sur les spécificités de chaque statut et de vous faire accompagner afin de choisir celui qui correspond le mieux à votre activité. Il est également possible de cumuler ces deux statuts, en fonction de la nature de vos revenus et de votre activité.</p>"},"id":"431ec839-3680-41a9-a8ee-7aad0b4684ba","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes:
+
+-
+  term: 'micro-entreprise6 '
+  note: "Le statut de micro-entrepreneur (ou auto-entrepreneur) permet d'exercer en nom propre. Il s'agit d'une entreprise individuelle qui bénéficie d'un régime fiscal et social simplifié. La création d'une micro-entreprise est rapide et présente moins de contraintes que celle d'une société"
+-
+  term: "Le statut d'artiste auteur·ices⁷"
+  note: "Vous êtes considéré·e comme artiste-auteur·ices lorsque vous créez ou participez à la création d'une oeuvre de l'esprit. Exemple : Livres, brochures et autres écrits littéraires, artistiques et scientifiques. Traductions, adaptations et illustrations de ces écrits."
+
+----
+
+Uuid: y6aqhfocej8k06tq

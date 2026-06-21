@@ -1,0 +1,27 @@
+Title: 5- Droits d’auteur·ice
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>En droit français, « l’auteur d’une oeuvre de l’esprit jouit sur cette oeuvre, du seul fait de sa création, d’un droit de propriété incorporelle exclusif et opposable à tous » (art. L111-1 CPI1).</p><p>Il existe deux types de droits d’auteur·ice :</p><p><strong>Les droits patrimoniaux</strong> sont ceux qui permettent aux auteur·ices de vivre, ou du moins d’obtenir des revenus par l’exploitation de son oeuvre. On parle de droit de reproduction et de représentation. Il s’agit en fait du droit que possède l’auteur·ice à autoriser, de manière limitée ou contractualisée, l’utilisation de ses oeuvres, de leurs représentations et reproductions.<br>C’est sur ces autorisations que l’artiste peut négocier des revenus. Il ne faut pas oublier que c’est aussi le droit d’interdire l’exploitation de ses oeuvres s'il n’y a pas eu d’accord préalable convenu.<br>Les droits patrimoniaux durent pendant toute la durée de vie de l’auteur·ice et perdurent 70 ans après son décès.</p><p><strong>Les droits moraux</strong> ont pour objectif de faire respecter la personnalité de l’auteur·ice au travers de son oeuvre via : le droit au nom, le droit au respect de l'oeuvre, le droit de divulgation, le droit de repentir. En France, ces droits sont incessibles⁹, inaliénables¹⁰ et imprescriptibles¹¹.<br>L’auteur·ice ne peut pas renoncer à son droit moral, ni même le céder à un tiers. Les droits moraux perdurent après la fin des droits patrimoniaux (70 ans après le décès de l’auteur·ice) via les héritier·es.</p>"},"id":"131c62d4-76a5-4801-8b58-30cb8cecf20b","isHidden":false,"type":"text"}]
+
+----
+
+Wordnotes:
+
+-
+  term: incessibles⁹
+  note: "Incessible : qui ne peut être cédé, donné ses droits sur l'oeuvre. L’auteur·ice ne peut pas se défaire de la propriété de l'oeuvre pour la confier à un tiers."
+-
+  term: inaliénables¹⁰
+  note: "Inaliénable : qui ne peut pas vendre ou transférer ses droits sur l'oeuvre. L’auteur·ice ne peut pas se défaire de la paternité de son oeuvre pour l’attribuer à un tiers."
+-
+  term: imprescriptibles¹¹
+  note: 'Imprescriptible : qui ne peut pas être supprimé, enlevé par un délai ; que le temps ne peut abolir, qui est immuable.'
+
+----
+
+Uuid: 8vbmzxg9v1xphms9

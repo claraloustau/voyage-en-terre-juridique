@@ -1,0 +1,58 @@
+columns:
+  - width: 2/3
+    sections:
+      chapters:
+        type: pages
+        headline: Grands chapitres
+        parent: kirby.page('home')
+        layout: list
+        sortBy: sort asc
+        status: all
+        templates:
+          - chapter
+        create:
+          - chapter
+        help: Les sous-chapitres se gèrent dans chaque chapitre.
+
+  - width: 1/3
+    sections:
+      livre_apparence:
+        type: fields
+        headline: Apparence
+        fields:
+          booksurface:
+            label: Couleur de fond (page et sommaire)
+            type: color
+            default: "#faf9f7"
+
+          bookaccent:
+            label: Couleur d’accent
+            type: color
+            default: "#ffeb00"
+
+      bookfooter:
+        type: fields
+        headline: Pied de page
+        help: Trois colonnes optionnelles. Si vides, affichage « Publication numérique » et l’année en cours.
+        fields:
+          bookfooter_col1:
+            label: Colonne 1 (gauche)
+            type: writer
+            size: small
+            nodes:
+              - paragraph
+              - bulletList
+          bookfooter_col2:
+            label: Colonne 2 (centre)
+            type: writer
+            size: small
+            nodes:
+              - paragraph
+              - bulletList
+          bookfooter_col3:
+            label: Colonne 3 (droite)
+            type: writer
+            size: small
+            nodes:
+              - paragraph
+              - bulletList

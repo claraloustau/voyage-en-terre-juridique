@@ -1,0 +1,45 @@
+title: Grand chapitre
+icon: 📖
+options:
+  changeTemplate: false
+
+tabs:
+  contenu:
+    label: Contenu
+    columns:
+      - width: 1/3
+        sections:
+          meta:
+            type: fields
+            fields:
+              chapternumber:
+                label: Numéro affiché
+                type: text
+                placeholder: ex. I, 1, A
+                width: 1/2
+              chaptercolor:
+                label: Couleur du chapitre
+                type: color
+                default: "#1e4d6b"
+                help: Titres, liens, repères des parties (titres H3), texte sélectionné.
+      - width: 2/3
+        sections:
+          subs:
+            type: pages
+            label: Sous-chapitres
+            layout: list
+            sortBy: sort asc
+            status: all
+            templates:
+              - subchapter
+            create:
+              - subchapter
+            help: Ordre des dossiers = ordre dans le sommaire.
+
+  seo:
+    label: SEO
+    fields:
+      metadescription:
+        label: Meta description
+        type: textarea
+        buttons: false

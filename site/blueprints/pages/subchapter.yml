@@ -1,0 +1,60 @@
+title: Sous-chapitre
+icon: 📄
+options:
+  changeTemplate: false
+
+status:
+  draft:
+    label: Brouillon
+  unlisted:
+    label: Non listé
+  listed:
+    label: Publié
+
+tabs:
+  contenu:
+    label: Contenu
+    columns:
+      - width: 1/1
+        fields:
+          lede:
+            label: Surtitre (optionnel)
+            type: text
+            icon: title
+          body:
+            label: Corps du texte
+            type: blocks
+            help: |
+              **Titre** en H3 pour les parties. Notes : exposant/indice dans la barre d’outils, bloc Markdown `(annot: mot note: texte)`, bloc **Terme annoté**, ou champ **Notes sur des mots** ci-dessous.
+            fieldsets:
+              - heading
+              - text
+              - list
+              - image
+              - markdown
+              - gloss
+              - embedscript
+              - line
+          wordnotes:
+            label: Notes sur des mots
+            type: structure
+            help: Mot ou expression dans le corps + texte de la note (fenêtre au clic). Insensible à la casse ; les expressions longues passent en premier.
+            fields:
+              term:
+                label: Mot ou expression dans le texte
+                type: text
+                width: 1/2
+                required: true
+              note:
+                label: Texte de la note (liens possibles)
+                type: writer
+                width: 1/2
+                required: true
+                inline: false
+                marks:
+                  - bold
+                  - italic
+                  - link
+                  - email
+                nodes:
+                  - paragraph

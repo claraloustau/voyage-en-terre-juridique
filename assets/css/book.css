@@ -1,0 +1,1249 @@
+/**
+ * Livre numérique — grille 12 colonnes, thème par chapitre, accessibilité
+ * Public Sans : corps ; HealTheWeb A : titres ; HealTheWeb B : liens au survol / focus
+ */
+
+@font-face {
+	font-family: "Healtheweb";
+	src: url("../fonts/HealTheWebA-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HealTheWebB";
+	src: url("../fonts/HealTheWebB-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/*
+ * --book-chapter et --book-surface viennent du <style> injecté après ce fichier
+ * (header.php) pour ne pas écraser la couleur du chapitre / le fond du panel.
+ */
+:root {
+	--book-ink: #0a0a0a;
+	--book-muted: #2a2a2a;
+	--book-border: #0a0a0a;
+	--book-brutal-yellow: #ffeb00;
+	--book-gap: clamp(0.75rem, 2vw, 1.5rem);
+	/* Hauteur réelle du header : surchargée par book.js (retour à la ligne, petits écrans) */
+	--book-header-h: 3.25rem;
+	--book-radius: 0;
+	--book-header-control-min-h: 2.35rem;
+	--book-header-control-pad-y: 0.45rem;
+	--book-link: color-mix(in srgb, var(--book-chapter, #1e4d6b) 72%, #000);
+	--book-chapter-bg: color-mix(
+		in srgb,
+		var(--book-chapter, #1e4d6b) 14%,
+		var(--book-surface, #faf9f7)
+	);
+	/* Lunettes 32×32, point chaud au centre du pont */
+	--book-cursor-glasses: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none' stroke='%23000' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='10.5' cy='17' r='5.5'/%3E%3Ccircle cx='21.5' cy='17' r='5.5'/%3E%3Cpath d='M16 17v0' stroke-width='3'/%3E%3Cpath d='M4 9l5 3.5'/%3E%3Cpath d='M28 9l-5 3.5'/%3E%3Cpath d='M7.5 7.5l1 4'/%3E%3Cpath d='M24.5 7.5l-1 4'/%3E%3C/g%3E%3C/svg%3E")
+		16 17, auto;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.book-site {
+	margin: 0;
+	min-height: 100%;
+	font-family: "Public Sans", system-ui, sans-serif;
+	font-size: clamp(1rem, 0.2vw + 0.95rem, 1.0625rem);
+	line-height: 1.65;
+	color: var(--book-ink);
+	background-color: var(--book-surface);
+	cursor: var(--book-cursor-glasses);
+	overflow-x: clip;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+.book-site :is(input:not([type="checkbox"]):not([type="radio"]), textarea) {
+	cursor: text;
+}
+
+/* Ancres / résultats recherche : pas sous le header fixe */
+html:has(.book-site) {
+	scroll-padding-top: calc(var(--book-header-h) + 0.75rem);
+}
+
+/* Titres : HealTheWeb A (blocs Kirby, Markdown, intro) */
+.book-site :where(h1, h2, h3, h4, h5, h6) {
+	font-family: "Healtheweb", "Public Sans", sans-serif;
+}
+
+/* Liens : variante B au survol et au focus clavier (WCAG) */
+.book-site a:hover,
+.book-site a:focus-visible {
+	font-family: "HealTheWebB", "Healtheweb", "Public Sans", sans-serif;
+}
+
+.book-skip {
+	position: absolute;
+	left: 0.5rem;
+	top: 0.5rem;
+	padding: 0.5rem 0.75rem;
+	background: var(--book-ink);
+	color: var(--book-surface);
+	text-decoration: none;
+	border-radius: var(--book-radius);
+	z-index: 100;
+	transform: translateY(-120%);
+	transition: transform 0.2s ease;
+}
+
+.book-skip:focus {
+	transform: translateY(0);
+	outline: 1px solid var(--book-chapter);
+	outline-offset: 1px;
+}
+
+/* --- En-tête --- */
+.book-header {
+	position: sticky;
+	top: 0;
+	z-index: 40;
+	width: 100%;
+	background-color: var(--book-brutal-yellow);
+	border-bottom: 2px solid var(--book-border);
+	min-height: var(--book-header-h);
+	transform: translateZ(0);
+	isolation: isolate;
+}
+
+.book-header__inner {
+	background-color: var(--book-brutal-yellow);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+	row-gap: 0.5rem;
+	max-width: 120rem;
+	margin: 0 auto;
+	padding-top: 0.55rem;
+	padding-bottom: 0.55rem;
+	padding-left: max(clamp(0.75rem, 3vw, 2rem), env(safe-area-inset-left));
+	padding-right: max(clamp(0.75rem, 3vw, 2rem), env(safe-area-inset-right));
+}
+
+.book-header__actions {
+	display: flex;
+	align-items: stretch;
+	gap: 0.65rem;
+	flex: 1 1 auto;
+	justify-content: flex-end;
+	min-width: 0;
+	max-width: 100%;
+}
+
+@media (min-width: 40rem) {
+	.book-header__actions {
+		flex: 0 1 28rem;
+	}
+}
+
+.book-logo {
+	font-family: "Healtheweb", "Public Sans", sans-serif;
+	font-size: clamp(1.1rem, 4.5vw + 0.35rem, 2rem);
+	line-height: 1.15;
+	text-decoration: none;
+	color: var(--book-ink);
+	letter-spacing: 0.02em;
+	min-width: 0;
+	overflow-wrap: anywhere;
+	display: inline-flex;
+	align-items: flex-end;
+}
+
+.book-logo__wave {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+
+/* Vague : chaque lettre monte puis redescend, décalage = onde */
+.book-logo__char {
+	display: inline-block;
+	animation: book-logo-wave 1.85s ease-in-out infinite;
+	animation-delay: calc(var(--i, 0) * 0.065s);
+	will-change: transform;
+}
+
+@keyframes book-logo-wave {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	35% {
+		transform: translateY(-0.42em);
+	}
+	70% {
+		transform: translateY(0.2em);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.book-logo__char {
+		animation: none;
+	}
+}
+
+.book-logo:hover,
+.book-logo:hover .book-logo__char,
+.book-logo:focus-visible,
+.book-logo:focus-visible .book-logo__char {
+	font-family: "Healtheweb", "Public Sans", sans-serif;
+}
+
+.book-logo:hover {
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+.book-search {
+	position: relative;
+	flex: 1 1 10rem;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.book-search__label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.book-search__input {
+	width: 100%;
+	font: inherit;
+	padding: var(--book-header-control-pad-y) 0.6rem;
+	border: 2px solid var(--book-border);
+	border-radius: var(--book-radius);
+	background: var(--book-surface);
+	color: var(--book-ink);
+	min-height: var(--book-header-control-min-h);
+}
+
+.book-search__input::placeholder {
+	color: var(--book-muted);
+	opacity: 1;
+}
+
+.book-search__input:focus {
+	outline: 2px solid var(--book-chapter);
+	outline-offset: 1px;
+}
+
+.book-search__results {
+	position: absolute;
+	right: 0;
+	top: calc(100% + 4px);
+	width: min(
+		22rem,
+		calc(100vw - 1.25rem - env(safe-area-inset-left) - env(safe-area-inset-right))
+	);
+	max-height: min(70vh, 22rem);
+	overflow: auto;
+	z-index: 50;
+	background: var(--book-brutal-yellow);
+	border: 2px solid var(--book-border);
+	box-shadow: 5px 5px 0 #000;
+	padding: 0.35rem 0;
+}
+
+.book-search__empty {
+	margin: 0;
+	padding: 0.65rem 0.75rem;
+	font-size: 0.9rem;
+}
+
+.book-search__hit {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+	padding: 0.55rem 0.7rem;
+	text-decoration: none;
+	color: var(--book-ink);
+	border-bottom: 1px solid var(--book-border);
+}
+
+.book-search__hit:last-child {
+	border-bottom: 0;
+}
+
+.book-search__hit:hover,
+.book-search__hit:focus-visible {
+	background: var(--book-surface);
+	outline: none;
+}
+
+.book-search__hit-title {
+	font-weight: 700;
+	font-family: "Healtheweb", "Public Sans", sans-serif;
+}
+
+.book-search__hit-chapter {
+	font-size: 0.78rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--book-muted);
+}
+
+.book-search__hit-excerpt {
+	font-size: 0.82rem;
+	line-height: 1.4;
+	color: var(--book-muted);
+}
+
+/* Occurrences du terme recherché après clic sur un résultat (?q=…) */
+.book-search-highlight {
+	background: var(--book-brutal-yellow);
+	color: var(--book-ink);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 1px;
+}
+
+.book-toc-toggle {
+	font: inherit;
+	cursor: var(--book-cursor-glasses);
+	padding: var(--book-header-control-pad-y) 0.85rem;
+	border: 2px solid var(--book-border);
+	border-radius: var(--book-radius);
+	background: var(--book-surface);
+	color: var(--book-ink);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	font-size: 0.8rem;
+	min-height: var(--book-header-control-min-h);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.book-toc-toggle:hover {
+	background: var(--book-ink);
+	color: var(--book-brutal-yellow);
+}
+
+.book-toc-toggle:focus-visible {
+	outline: 2px solid var(--book-chapter);
+	outline-offset: 1px;
+}
+
+/* --- Layout côte à côte --- */
+.book-layout {
+	display: flex;
+	align-items: stretch;
+	min-height: calc(100vh - var(--book-header-h));
+}
+
+.book-aside {
+	flex: 0 0 17rem;
+	width: 17rem;
+	max-width: min(17rem, 92vw);
+	border-right: 2px solid var(--book-border);
+	background: var(--book-brutal-yellow);
+	overflow: auto;
+	transition:
+		transform 0.28s ease,
+		flex-basis 0.28s ease,
+		opacity 0.2s ease,
+		border-color 0.2s ease;
+}
+
+.book-layout__main {
+	flex: 1;
+	min-width: 0;
+	overflow-x: hidden;
+}
+
+.book-main {
+	display: block;
+	margin: 0;
+	padding: clamp(1.25rem, 3vw, 2.5rem) 0
+		max(4rem, calc(3rem + env(safe-area-inset-bottom)));
+}
+
+/* Grand écran : repli = largeur nulle */
+@media (min-width: 64rem) {
+	.book-site.book--toc-collapsed .book-aside {
+		flex-basis: 0;
+		width: 0;
+		max-width: 0;
+		padding: 0;
+		border-right-width: 0;
+		opacity: 0;
+		overflow: hidden;
+		pointer-events: none;
+	}
+}
+
+/* Mobile : panneau coulissant */
+@media (max-width: 63.99rem) {
+	.book-aside {
+		position: fixed;
+		top: var(--book-header-h);
+		left: 0;
+		bottom: 0;
+		z-index: 35;
+		flex: none;
+		box-shadow: 7px 0 0 rgb(0 0 0 / 0.12);
+		transform: translateX(0);
+		padding-bottom: env(safe-area-inset-bottom);
+	}
+
+	.book-site.book--toc-collapsed .book-aside {
+		transform: translateX(-105%);
+		pointer-events: none;
+	}
+}
+
+.book-toc__inner {
+	padding: 1.25rem max(1rem, env(safe-area-inset-left)) 2rem
+		max(1rem, env(safe-area-inset-right));
+}
+
+.book-toc__title {
+	font-family: "Healtheweb", "Public Sans", sans-serif;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--book-ink);
+	margin: 0 0 1rem;
+	font-weight: 800;
+	border-bottom: 2px solid var(--book-border);
+	padding-bottom: 0.5rem;
+}
+
+.book-toc__chapters {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.book-toc__chapter {
+	margin: 0 0 0.85rem;
+}
+
+.book-toc__chapter-bar {
+	display: flex;
+	align-items: center;
+	gap: 0.2rem;
+	margin: 0 0 0.15rem;
+}
+
+.book-toc__chapter-bar--link-only {
+	margin: 0 0 0.2rem;
+}
+
+.book-toc__toggle {
+	font: inherit;
+	margin: 0;
+	padding: 0.12rem 0.12rem 0.12rem 0.25rem;
+	border: 0;
+	border-radius: 2px;
+	background: transparent;
+	color: var(--book-ink);
+	width: auto;
+	height: auto;
+	min-width: 1.55rem;
+	min-height: 1.55rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	cursor: var(--book-cursor-glasses, pointer);
+}
+
+.book-toc__toggle:hover {
+	color: var(--book-ink);
+	background: transparent;
+}
+
+.book-toc__toggle:focus-visible {
+	outline: 1px solid var(--book-ink);
+	outline-offset: 1px;
+}
+
+.book-toc__chev {
+	display: block;
+	width: 0.5em;
+	height: 0.5em;
+	border-right: 2px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	transform: translateY(-0.04em) rotate(45deg);
+	transition: transform 0.2s ease;
+	transform-origin: 50% 50%;
+}
+
+.book-toc__toggle[aria-expanded="false"] .book-toc__chev,
+.book-toc__chapter--collapsed .book-toc__toggle .book-toc__chev {
+	transform: translateY(0) rotate(-45deg);
+}
+
+.book-toc__chapter-link {
+	flex: 0 1 auto;
+	min-width: 0;
+	max-width: 100%;
+}
+
+.book-toc__chapter--open .book-chapter-badge--toc {
+	box-shadow: inset 0 0 0 1px var(--book-ink);
+}
+
+.book-toc__subs {
+	list-style: none;
+	margin: 0.4rem 0 0;
+	padding: 0 0 0 0.85rem;
+	border-left: 2px solid var(--book-border);
+}
+
+.book-toc__subs a {
+	display: block;
+	padding: 0.2rem 0.2rem;
+	color: var(--book-ink);
+	text-decoration: none;
+}
+
+.book-toc__subs a:hover,
+.book-toc__subs a:focus-visible {
+	color: var(--book-ink);
+	background-color: var(--book-brutal-yellow);
+	text-decoration: none;
+}
+
+.book-toc__subs a[aria-current="page"] {
+	color: var(--book-ink);
+	font-weight: 600;
+}
+
+/* Pastilles chapitre dans le sommaire : survol jaune, texte noir (surcharge du style inline) */
+.book-aside .book-toc__chapter-link.book-chapter-badge--toc:hover,
+.book-aside .book-toc__chapter-link.book-chapter-badge--toc:focus-visible {
+	background-color: var(--book-brutal-yellow) !important;
+	color: var(--book-ink) !important;
+	opacity: 1;
+	filter: none;
+	text-decoration: none;
+}
+
+/* --- Grille 12 colonnes (contenu) --- */
+.book-grid {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	gap: var(--book-gap);
+	max-width: 120rem;
+	margin: 0 auto;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: max(clamp(0.75rem, 3vw, 2rem), env(safe-area-inset-left));
+	padding-right: max(clamp(0.75rem, 3vw, 2rem), env(safe-area-inset-right));
+}
+
+.book-grid__content {
+	grid-column: 1 / -1;
+}
+
+@media (min-width: 48rem) {
+	.book-grid__content {
+		grid-column: 2 / 12;
+	}
+}
+
+@media (min-width: 64rem) {
+	.book-grid--article .book-grid__content {
+		grid-column: 3 / 11;
+	}
+}
+
+/* --- Couverture --- */
+.book-cover__title {
+	font-size: clamp(2rem, 5vw, 3.25rem);
+	font-weight: 600;
+	line-height: 1.15;
+	margin: 0 0 0.5rem;
+	letter-spacing: -0.02em;
+}
+
+.book-cover__subtitle {
+	font-size: clamp(1rem, 2.5vw, 1.15rem);
+	color: var(--book-muted);
+	margin: 0 0 1.5rem;
+}
+
+.book-cover__intro {
+	max-width: 38rem;
+}
+
+.book-cover__cta {
+	margin-top: 2rem;
+}
+
+.book-btn {
+	display: inline-block;
+	padding: 0.65rem 1.25rem;
+	border: 2px solid var(--book-ink);
+	border-radius: var(--book-radius);
+	color: var(--book-ink);
+	text-decoration: none;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: 0.85rem;
+}
+
+.book-btn:hover {
+	background: var(--book-ink);
+	color: var(--book-brutal-yellow);
+}
+
+.book-btn:focus-visible {
+	outline: 1px solid var(--book-chapter);
+	outline-offset: 2px;
+}
+
+/* Pastille / rectangle : couleur chapitre (panel) + texte contrasté (PHP) */
+.book-chapter-badge {
+	display: inline-block;
+	padding: 0.5em 1em;
+	border-radius: var(--book-radius);
+	font-family: "Healtheweb", "Public Sans", sans-serif;
+	font-weight: 600;
+	line-height: 1.25;
+	text-decoration: none;
+	box-decoration-break: clone;
+	background-image: none;
+	transition:
+		opacity 0.15s ease,
+		filter 0.15s ease;
+}
+
+a.book-chapter-badge:hover {
+	opacity: 0.92;
+	filter: brightness(1.04);
+}
+
+a.book-chapter-badge:focus-visible {
+	outline: 1px solid var(--book-chapter, currentColor);
+	outline-offset: 2px;
+	opacity: 1;
+	filter: none;
+}
+
+.book-chapter-badge--toc {
+	display: block;
+	width: 100%;
+	font-size: 0.95rem;
+	padding: 0.45em 0.65em;
+}
+
+.book-chapter-badge--compact {
+	font-size: 0.88rem;
+	padding: 0.38em 0.75em;
+}
+
+/* --- En-tête grand chapitre --- */
+.book-chapter-head {
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+.book-chapter-head__title {
+	margin: 0;
+	line-height: 1.2;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.book-chapter-head .book-chapter-badge {
+	font-size: clamp(1.35rem, 3.5vw, 2.15rem);
+	padding: 0.5em 0.95em;
+}
+
+.book-chapter-subs__h {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--book-muted);
+	margin: 0 0 0.75rem;
+}
+
+.book-chapter-subs__list {
+	margin: 0;
+	padding-left: 1.25rem;
+}
+
+.book-chapter-subs__list a {
+	color: var(--book-ink);
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.book-chapter-subs__list a:hover,
+.book-chapter-subs__list a:focus-visible {
+	color: var(--book-ink);
+	background-color: var(--book-brutal-yellow);
+	text-decoration: none;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	padding: 0.12em 0.2em;
+}
+
+.book-muted {
+	color: var(--book-muted);
+	font-size: 0.95rem;
+}
+
+/* --- Article (sous-chapitre) --- */
+.book-article-head {
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 2px solid var(--book-border);
+}
+
+.book-article-head__chapter {
+	margin: 0 0 0.5rem;
+	font-size: 0.9rem;
+}
+
+.book-article-head__chapter .book-chapter-badge {
+	vertical-align: baseline;
+}
+
+.book-article-head__title {
+	font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+	line-height: 1.2;
+	margin: 0 0 0.5rem;
+}
+
+.book-article-head__lede {
+	margin: 0;
+	color: var(--book-muted);
+	font-size: 1.05rem;
+}
+
+/* --- Pagination article (partie préc. / suiv.) --- */
+.book-article-nav {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--book-gap);
+	align-items: stretch;
+	margin-top: 3rem;
+	padding-top: 1.5rem;
+	border-top: 2px solid var(--book-border);
+}
+
+@media (min-width: 48rem) {
+	.book-grid--article .book-article-nav {
+		grid-column: 2 / 12;
+	}
+}
+
+@media (min-width: 64rem) {
+	.book-grid--article .book-article-nav {
+		grid-column: 3 / 11;
+	}
+}
+
+.book-article-nav__cell {
+	min-width: 0;
+}
+
+.book-article-nav__cell--next {
+	text-align: right;
+	justify-self: end;
+	width: 100%;
+}
+
+.book-article-nav__link {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	max-width: 100%;
+	padding: 0.75rem 0.85rem;
+	border: 2px solid var(--book-border);
+	text-decoration: none;
+	color: var(--book-ink);
+	background: var(--book-surface);
+	transition: none;
+}
+
+.book-article-nav__link:hover,
+.book-article-nav__link:focus-visible {
+	background: var(--book-brutal-yellow);
+	color: var(--book-ink);
+	text-decoration: none;
+	outline: none;
+}
+
+.book-article-nav__label {
+	font-size: 0.72rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--book-muted);
+}
+
+.book-article-nav__link:hover .book-article-nav__label,
+.book-article-nav__link:focus-visible .book-article-nav__label {
+	color: var(--book-ink);
+}
+
+.book-article-nav__title {
+	font-family: "Healtheweb", "Public Sans", sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.25;
+	overflow-wrap: anywhere;
+}
+
+@media (max-width: 36rem) {
+	.book-article-nav {
+		grid-template-columns: 1fr;
+	}
+
+	.book-article-nav__cell--next {
+		text-align: left;
+		justify-self: stretch;
+	}
+}
+
+/* --- Prose & blocs --- */
+.book-prose :where(p) {
+	margin: 0 0 1em;
+}
+
+.book-prose :where(ul, ol) {
+	margin: 0 0 1em;
+	padding-left: 1.35rem;
+}
+
+.book-blocks {
+	counter-reset: book-part;
+}
+
+.book-blocks .block-type-heading h3 {
+	counter-increment: book-part;
+	position: relative;
+}
+
+.book-blocks .block-type-heading h3::before {
+	content: counter(book-part, decimal) ". ";
+	color: var(--book-link);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+}
+
+.book-blocks .block-type-heading :where(h1, h2, h4, h5, h6) {
+	line-height: 1.25;
+	margin: 1.5rem 0 0.65rem;
+}
+
+.book-blocks .block-type-heading h3 {
+	font-size: 1.2rem;
+	margin: 2rem 0 0.75rem;
+}
+
+.book-blocks .block-type-text {
+	margin-bottom: 1.25rem;
+}
+
+.book-blocks .block-type-text :where(a) {
+	color: var(--book-link);
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+.book-blocks .block-type-list {
+	margin-bottom: 1.25rem;
+	overflow-wrap: break-word;
+}
+
+.book-blocks .block-type-markdown {
+	margin-bottom: 1.25rem;
+}
+
+.book-blocks .block-type-text,
+.book-blocks .block-type-markdown {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	overflow-x: auto;
+	max-width: 100%;
+}
+
+.book-blocks .block-type-text :where(pre),
+.book-blocks .block-type-markdown :where(pre) {
+	max-width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	padding: 0.75rem 1rem;
+	border: 2px solid var(--book-border);
+	background: color-mix(in srgb, var(--book-ink) 6%, var(--book-surface));
+	font-size: 0.88rem;
+	line-height: 1.45;
+}
+
+.book-blocks .block-type-text :where(table),
+.book-blocks .block-type-markdown :where(table) {
+	display: table;
+	width: max-content;
+	max-width: min(100%, calc(100vw - 2rem - env(safe-area-inset-left) - env(safe-area-inset-right)));
+	border-collapse: collapse;
+}
+
+.book-blocks .block-type-text :where(video, iframe, svg),
+.book-blocks .block-type-markdown :where(video, iframe, svg) {
+	max-width: 100%;
+	height: auto;
+}
+
+.book-blocks .block-type-markdown :where(a) {
+	color: var(--book-link);
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+.book-blocks .block-type-image figure {
+	margin: 1.5rem 0;
+}
+
+.book-blocks .block-type-image img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 0;
+	border: 2px solid var(--book-border);
+}
+
+.book-blocks .img-caption {
+	font-size: 0.9rem;
+	color: var(--book-muted);
+	margin-top: 0.5rem;
+}
+
+/* Chiffres d’exposant (notes ¹ ² ³) dans le corps de texte */
+.book-prose sup,
+.book-prose :where(p, li, h1, h2, h3, h4, h5, h6) sup {
+	font-size: 0.72em;
+	font-weight: 600;
+	line-height: 0;
+	position: relative;
+	vertical-align: super;
+}
+
+.book-prose :where(p, li, h1, h2, h3, h4, h5, h6) sub {
+	font-size: 0.75em;
+	line-height: 0;
+	vertical-align: sub;
+}
+
+/* Notes : clic = modale (contenu caché au rendu) */
+.book-annot-wrap {
+	position: relative;
+	display: inline;
+}
+
+.book-annot {
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-color: var(--book-link);
+	text-underline-offset: 0.2em;
+	border-radius: 1px;
+}
+
+.book-annot:focus-visible {
+	outline: 1px solid var(--book-chapter);
+	outline-offset: 1px;
+}
+
+/* Contenu de note : invisible à l’écran, lu pour la modale (JS) */
+.book-annot__tip {
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(100%);
+	white-space: nowrap;
+	border: 0;
+	pointer-events: none;
+}
+
+/* Panneau de note flottant (plusieurs possibles, déplaçable) */
+.book-note-panel {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 201;
+	box-sizing: border-box;
+	width: min(32rem, calc(100vw - 2.5rem));
+	max-height: min(32rem, calc(100dvh - 2rem));
+	margin: 0;
+	padding: 0;
+	border: 2px solid var(--book-border);
+	border-radius: 0;
+	background: var(--book-brutal-yellow);
+	color: var(--book-ink);
+	text-align: left;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.book-note-resize {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+	z-index: 4;
+	padding: 0.1rem;
+	box-sizing: border-box;
+	cursor: nwse-resize;
+	touch-action: none;
+	color: var(--book-ink);
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.book-note-resize:hover,
+.book-note-resize:focus-visible {
+	background: rgb(0 0 0 / 0.06);
+}
+
+.book-note-panel__inner {
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+	flex: 1 1 auto;
+	max-height: 100%;
+	overflow: hidden;
+}
+
+.book-note-backdrop__head--draggable {
+	cursor: grab;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: none;
+}
+
+.book-note-backdrop__head--draggable.is-book-note-dragging {
+	cursor: grabbing;
+}
+
+.book-note-backdrop__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem 1rem;
+	padding: 0.65rem 0.8rem 0.55rem;
+	background: var(--book-surface);
+	border-bottom: 2px solid var(--book-border);
+}
+
+.book-note-backdrop__kicker {
+	margin: 0;
+	flex: 1 1 auto;
+	min-width: 0;
+	font-size: 0.8rem;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+	text-transform: none;
+	color: var(--book-ink);
+}
+
+.book-note-backdrop__head-actions {
+	display: flex;
+	align-items: center;
+	gap: 0.15rem;
+	flex-shrink: 0;
+}
+
+.book-note-backdrop__drag-hint {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	pointer-events: none;
+	color: var(--book-ink);
+	opacity: 0.78;
+}
+
+.book-note-backdrop__drag-ico {
+	display: block;
+}
+
+.book-note-resize-ico {
+	display: block;
+}
+
+.book-note-backdrop__close {
+	flex-shrink: 0;
+	margin: 0;
+	padding: 0.15rem 0.4rem 0.2rem;
+	min-width: 2.5rem;
+	min-height: 2.5rem;
+	font: inherit;
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 1;
+	color: var(--book-ink);
+	background: var(--book-brutal-yellow);
+	border: 2px solid var(--book-border);
+	border-radius: 0;
+	cursor: pointer;
+}
+
+.book-note-backdrop__close:hover,
+.book-note-backdrop__close:focus-visible {
+	background: var(--book-surface);
+}
+
+.book-note-backdrop__content {
+	flex: 1 1 auto;
+	min-height: 0;
+	margin: 0;
+	padding: 0.9rem 1.05rem 1.1rem 1.1rem;
+	font-size: 0.9rem;
+	line-height: 1.55;
+	color: var(--book-ink);
+	overflow: auto;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Laisse la place à la poignée de redimensionnement (coin bas-droit) */
+.book-note-panel .book-note-backdrop__content {
+	padding-bottom: 1.45rem;
+}
+
+.book-note-backdrop__content a {
+	font-family: "HealTheWebB", "Healtheweb", "Public Sans", sans-serif;
+	color: var(--book-link);
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+	word-break: break-word;
+}
+
+.book-note-backdrop__content a::before {
+	content: "↘\00a0";
+	font-family: "HealTheWebB", "Healtheweb", "Public Sans", sans-serif;
+	white-space: nowrap;
+}
+
+.book-gloss-block {
+	margin: 1rem 0;
+	font-size: 0.95rem;
+	color: var(--book-muted);
+}
+
+/* Sélection : texte noir sur jaune */
+.book-site ::selection {
+	background: var(--book-brutal-yellow);
+	color: var(--book-ink);
+}
+
+.book-site .book-search__input::selection {
+	background: var(--book-brutal-yellow);
+	color: var(--book-ink);
+}
+
+/* Pied de page livre */
+.book-footer {
+	background-color: var(--book-brutal-yellow);
+	border-top: 2px solid var(--book-border);
+	margin-top: auto;
+}
+
+.book-footer__inner {
+	max-width: 120rem;
+	margin: 0 auto;
+	padding-top: 0.9rem;
+	padding-bottom: max(0.9rem, env(safe-area-inset-bottom));
+	padding-left: max(clamp(0.75rem, 3vw, 2rem), env(safe-area-inset-left));
+	padding-right: max(clamp(0.75rem, 3vw, 2rem), env(safe-area-inset-right));
+}
+
+.book-footer__inner--cols {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.85rem 1.25rem;
+	align-items: start;
+}
+
+@media (min-width: 48rem) {
+	.book-footer__inner--cols {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.book-footer__col {
+	min-width: 0;
+	font-family: "Healtheweb", "Public Sans", sans-serif;
+	font-size: 0.88rem;
+	line-height: 1.55;
+	color: var(--book-muted);
+}
+
+.book-footer__inner--cols .book-footer__col :where(p, ul, ol) {
+	margin: 0 0 0.4em;
+}
+
+.book-footer__inner--cols .book-footer__col :where(ul, ol) {
+	padding-left: 1.15rem;
+}
+
+.book-footer__inner--cols .book-footer__col--2 {
+	text-align: center;
+}
+
+.book-footer__inner--cols .book-footer__col--2 :where(ul, ol) {
+	list-style-position: inside;
+	padding-left: 0;
+}
+
+.book-footer__inner--cols .book-footer__col--3 {
+	text-align: right;
+}
+
+.book-footer__inner--cols .book-footer__col--3 :where(ul, ol) {
+	list-style-position: inside;
+	padding-left: 0;
+}
+
+.book-footer__meta {
+	margin: 0;
+	font-family: "Healtheweb", "Public Sans", sans-serif;
+	font-size: 0.85rem;
+	color: var(--book-muted);
+}
+

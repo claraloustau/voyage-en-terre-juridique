@@ -1,0 +1,75 @@
+title: Accueil — Livre
+icon: 🏠
+
+options:
+  changeStatus: false
+
+tabs:
+  livre:
+    label: Livre
+    columns:
+      - width: 1/1
+        sections:
+          book:
+            type: fields
+            fields:
+              booktitle:
+                label: Titre du livre
+                type: text
+                width: 1/2
+              booksubtitle:
+                label: Sous-titre
+                type: text
+                width: 1/2
+              intro:
+                label: Introduction
+                type: writer
+                nodes:
+                  - paragraph
+                  - bulletList
+                  - orderedList
+                marks:
+                  - bold
+                  - italic
+                  - underline
+                  - strike
+                  - code
+                  - sup
+                  - sub
+                  - link
+                  - email
+                help: Le champ **Notes sur l’intro** relie un mot de l’intro à une note (fenêtre au clic).
+              wordnotes:
+                label: Notes sur l’intro
+                type: structure
+                help: Mot dans l’intro + contenu de la note. Mêmes règles que les sous-chapitres.
+                fields:
+                  term:
+                    label: Mot ou expression dans l’intro
+                    type: text
+                    width: 1/2
+                    required: true
+                  note:
+                    label: Texte de la note (liens possibles)
+                    type: writer
+                    width: 1/2
+                    required: true
+                    inline: false
+                    marks:
+                      - bold
+                      - italic
+                      - link
+                      - email
+                    nodes:
+                      - paragraph
+          chapters:
+            type: pages
+            label: Grands chapitres
+            layout: list
+            sortBy: sort asc
+            status: all
+            templates:
+              - chapter
+            create:
+              - chapter
+            help: Ordre des chapitres = ordre dans le sommaire. Les sous-chapitres se créent dans chaque chapitre.

@@ -1,0 +1,21 @@
+Title: 2- La feuille de route.
+
+----
+
+Lede: 
+
+----
+
+Body: [{"content":{"text":"<p>La feuille de route est un document stratégique et visuel qui offre une vue d’ensemble des différentes phases d’un projet. Elle structure le processus de travail en définissant les étapes clés, les objectifs à atteindre et les livrables³ attendus. C’est un outil essentiel pour organiser son processus de création, suivre l’évolution du projet et assurer sa cohérence. Elle peut être partagée avec la·e client·e lorsque celui-ci doit intervenir dans le processus de travail et assurer la transparence. Elle permet également d’atténuer un éventuel rapport de force qui pourrait se faire sentir entre un·e commanditaire expérimenté·e et un·e designer·euse indépendant·e débutant·e. <br>Les modifications et déclinaisons supplémentaires de “dernières minutes” pourront alors être renégociées ou refusées. La présence d’un document approuvé par les deux partis sera alors votre meilleur atout.</p>"},"id":"2139decc-086f-4536-8ba7-22b09ba276d3","isHidden":false,"type":"text"},{"content":{"level":"h4","text":"Une feuille de route permet de :"},"id":"c80ece95-1132-4518-8f50-c893ee701c25","isHidden":false,"type":"heading"},{"content":{"text":"<ul><li>Définir des objectifs clairs <br>(ex. : création d’une identité visuelle, d’une affiche, d’un site web, d’une installation artistique).</li><li>Planifier les grandes étapes(recherche, esquisses, tests, nombre d’allersretours,validation client, production).</li><li>Anticiper les besoins(temps, matériel, prestataires éventuels).</li><li>Suivre son avancée et ajuster si nécessaire.</li><li>Communiquer efficacement avec lescommanditaires ou les collaborateur·ices.</li></ul>"},"id":"7ec28705-94ed-49b9-a415-cff1aa00782d","isHidden":false,"type":"list"}]
+
+----
+
+Wordnotes:
+
+-
+  term: livrables³
+  note: '<p>Il s''agit des éléments finaux qui seront envoyés aux client·es. <br><a href="/@/page/v7sphqzeqwzr4ti0">Voir : A-7- La finalisation : Livraison et guide d’utilisation page 17</a></p>'
+
+----
+
+Uuid: oj7nnudvqwkawv3t

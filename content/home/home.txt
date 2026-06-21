@@ -1,0 +1,28 @@
+Title: Accueil
+
+----
+
+Booktitle: Voyage en terre juridique
+
+----
+
+Booksubtitle: Le kit de survie
+
+----
+
+Intro: <p>Ce livret a été rédigé afin de fournir des clés de compréhension et de vulgarisation de l’environnement professionnel des travailleur·euses de l’art indépendant·es¹. Nous avons rédigé ce livret, qui prend part d’un processus pédagogique dans le contexte de l’animation du workshop Voyage en terre juridique. Il s'adresse aux étudiant·es de l'ÉSAD Pyrénées en DNSEP Design - mention design graphique multimédia dans le cadre d’une dynamique d’atelier.</p><p>Ce livret n’a pas pour vocation d’être un guide administratif et juridique. Nous avons cherché à réunir les éléments de réponses face aux multiples questionnements auxquels nous avons été confronté·es lors de nos premières années en tant qu’artistes-auteur·ices et collectif de design graphique. Vous y trouverez des clés méthodologiques et techniques qui vous accompagneront dans l’approche de vos premiers projets. Il ne constitue pas une formation qui rend tout·e lecteur·ice autonome dans sa création d’activité.</p>
+
+----
+
+Wordnotes:
+
+-
+  term: 'travailleur·euses de l’art indépendant·es¹'
+  note: |-
+    Les travailleur·euses indépendant·es exercent une activité économique en étant à leur propre compte. Iels sont autonomes dans la gestion de leur organisation, dans le choix de leurs client·es et dans la tarification de leurs prestations.
+
+    Artistes, commissaires d'exposition, critiques d'art, designer·euses, graphistes, illustrateur·ices, médiateur·ices, photographes, régisseur·euses etc.
+
+----
+
+Uuid: wljMYhm0m3e9QOwC
